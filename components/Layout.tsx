@@ -78,6 +78,7 @@ function Header() {
   const { pathname } = useRouter();
   // All links
   const links = [
+    { name: "Contact", path: "" }
   ];
 
   return (
