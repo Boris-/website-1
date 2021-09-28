@@ -36,32 +36,23 @@ function Head(): ReactElement {
     <HTMLHead>
       {/* Primary Meta Tags */}
       <title>Loot</title>
-      <meta name="title" content="Loot" />
+      <meta name="title" content="Jungle Freaks" />
       <meta
         name="description"
-        content="Loot is randomized adventurer gear generated and stored on chain."
+        content=""
       />
 
       {/* OG + Faceook */}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.lootproject.com/" />
-      <meta property="og:title" content="Loot" />
+      <meta property="og:url" content="https://www.Junglefreaks.com/" />
+      <meta property="og:title" content="Jungle Freaks" />
       <meta
         property="og:description"
-        content="Loot is randomized adventurer gear generated and stored on chain."
+        content="Wildest freaks ever seen in the Ethereum jungle"
       />
-      <meta property="og:image" content="https://lootproject.com/meta.png" />
+      <meta property="og:image" content="" />
 
-      {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://www.lootproject.com/" />
-      <meta property="twitter:title" content="Loot" />
-      <meta
-        property="twitter:description"
-        content="Loot is randomized adventurer gear generated and stored on chain."
-      />
-      <meta property="twitter:image" content="https://lootproject.com/meta.png" />
-
+      
       {/* Font */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link
@@ -87,8 +78,6 @@ function Header() {
   const { pathname } = useRouter();
   // All links
   const links = [
-    { name: "FAQ", path: "/faq" },
-    { name: "Resources", path: "/resources" },
   ];
 
   return (
@@ -96,7 +85,7 @@ function Header() {
       {/* Main logo */}
       <div className={styles.header__logo}>
         <Link href="/">
-          <a>Loot</a>
+          <a>Jungle Freaks</a>
         </Link>
       </div>
 
@@ -135,17 +124,6 @@ function Header() {
 function Footer(): ReactElement {
   return (
     <div className={styles.footer}>
-      <p>
-        This website is{" "}
-        <a
-          href="https://github.com/lootproject/website"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          open-source
-        </a>
-        .
-      </p>
     </div>
   );
 }
