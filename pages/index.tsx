@@ -9,33 +9,24 @@ import type { ReactElement } from "react";
 export default function Home(): ReactElement {
   // Quicklinks to render
   const quicklinks: Record<string, string>[] = [
-    { name: "OpenSea", url: "https://opensea.io/collection/lootproject" },
-    { name: "Discord", url: "https://discord.gg/NXEntTSHgy" },
+    { name: "OpenSea", url: "" },
+    { name: "Discord", url: "https://discord.gg/pDPXhd56Yr" },
     {
       name: "Twitter",
-      url: "https://twitter.com/lootproject",
+      url: "https://twitter.com/JungleFreaksNFT",
     },
     {
       name: "Contract",
-      url: "https://etherscan.io/address/0xff9c1b15b16263c61d017ee9f65c50e4ae0113d7",
+      url: "",
     },
   ];
-
-  /**
-   * Selects 3 random bags from defaultBags
-   * @returns {Record<string, string>[]} randomized bags
-   */
-  const getRandomThreeBags = () => {
-    const shuffled = defaultBags.sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, 3);
-  };
-
+  
   return (
     <Layout>
       <div>
         <div className={styles.home__cta}>
           {/* CTA title */}
-          <h1>Loot</h1>
+          <h1>Jungle Freaks</h1>
 
           {/* Quicklinks */}
           <ul>
@@ -52,37 +43,9 @@ export default function Home(): ReactElement {
 
           {/* CTA Description */}
           <p>
-            Loot is randomized adventurer gear generated and stored on chain.
-            <br /> Stats, images, and other functionality are intentionally
-            omitted for others to interpret. <br /> Feel free to use Loot in any
-            way you want.
+            We are doing some work behind the scenes
+            Website will be back up soon!
           </p>
-        </div>
-
-        {/* Rendering sample loot bags */}
-        <div className={styles.home__feature}>
-          <span>Example Bags:</span>
-          {getRandomThreeBags().map(({ id, attributes }, i) => (
-            // For each loot bag, render item and link to OpenSea
-            <a
-              href={`https://opensea.io/assets/0xff9c1b15b16263c61d017ee9f65c50e4ae0113d7/${id}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              key={i}
-              className={styles.home__bag}
-            >
-              <div className={styles.home__bag_attributes}>
-                <span>#{id}</span>
-                <ul>
-                  {attributes.map((attribute, i) => (
-                    <li key={i}>
-                      <span>{attribute}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </a>
-          ))}
         </div>
       </div>
     </Layout>
